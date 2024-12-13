@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiper Slider</title>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100px; /* Restrict the height to 100px */
+      }
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: #f3f3f3;
+      }
+
+      .swiper-slide img {
+        max-width: 80%;
+        height: 60px; /* Ensure images fit within the 100px height */
+        border-radius: 10px;
+      }
+
+      .swiper-slide h2 {
+        margin-top: 5px;
+        font-size: 14px; /* Adjust font size for smaller height */
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Swiper Container -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img
+            src="https://via.placeholder.com/600x400"
+            alt="UltraTech Cement"
+          />
+          <h2>Supplier: UltraTech Cement</h2>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://via.placeholder.com/600x400" alt="Ambuja Cements" />
+          <h2>Supplier: Ambuja Cements</h2>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://via.placeholder.com/600x400" alt="Dalmia Bharat" />
+          <h2>Supplier: Dalmia Bharat</h2>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://via.placeholder.com/600x400" alt="Tata Steel" />
+          <h2>Supplier: Tata Steel</h2>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://via.placeholder.com/600x400"
+            alt="JSW Steel Limited"
+          />
+          <h2>Supplier: JSW Steel Limited</h2>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://via.placeholder.com/600x400" alt="Agni Steels" />
+          <h2>Supplier: Agni Steels</h2>
+        </div>
+      </div>
+      <!-- Pagination and Navigation Buttons -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 3 /* Display 3 suppliers per view */,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
